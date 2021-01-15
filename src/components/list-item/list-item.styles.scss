@@ -1,0 +1,35 @@
+@import "../../utils/variables.scss";
+
+.list-item {
+  position: relative;
+  background-color: white;
+  // height: 4em;
+  width: 90vw;
+  border-radius: 10px;
+
+  &__item {
+  }
+
+  &__avatar {
+    transform: scale(1.4);
+  }
+
+  &__code {
+    color: #707070;
+  }
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+.MuiAvatar-img {
+  object-fit: contain !important;
+  // transform: scale(1.2);
+}
+
+.selected {
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
