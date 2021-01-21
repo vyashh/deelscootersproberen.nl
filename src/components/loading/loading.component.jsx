@@ -4,12 +4,14 @@ import loadingAnimation from "../../assets/img/loading.svg";
 
 export default function Loading() {
   return (
-    <div className="loading">
-      <img
-        className="loading__animation"
-        src={loadingAnimation}
-        alt="loading animation"
-      />
+    <div className="jumbotron vertical-center">
+      <div className="container">
+        <img
+          className="loading__animation"
+          src={loadingAnimation}
+          alt="loading animation"
+        />
+      </div>
     </div>
   );
 }

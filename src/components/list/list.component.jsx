@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import firebase from "../../services/firebase";
 import { Context } from "../../services/store";
 import "./list.styles.scss";
@@ -19,11 +19,9 @@ export default function ServiceList() {
   const [services, setServices] = data;
   const [loading, setLoading] = loadingState;
 
-  useEffect(() => {}, []);
-
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
   return (
     <div>
       <Grid>
