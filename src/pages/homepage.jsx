@@ -16,9 +16,11 @@ export default function HomePage() {
   return (
     <div>
       <InfoBar />
-      <ServiceList />
-      <hr />
-      <Faq />
+      <div className="container">
+        <ServiceList />
+        <hr />
+        <Faq />
+      </div>
     </div>
   );
 }
