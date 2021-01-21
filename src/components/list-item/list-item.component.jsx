@@ -3,7 +3,6 @@ import "./list-item.styles.scss";
 import felyxlogo from "../../assets/img/logos/logo_felyx.svg";
 import checklogo from "../../assets/img/logos/logo_check.svg";
 import gologo from "../../assets/img/logos/logo_go.png";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
