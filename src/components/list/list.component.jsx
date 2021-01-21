@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import firebase from "../../services/firebase";
 import { Context } from "../../services/store";
 import "./list.styles.scss";
@@ -15,22 +15,33 @@ export default function ServiceList() {
   //   { company: "Go Share", code: "ZEOHDE" },
   // ];
 
-  const { data, loadingState } = useContext(Context);
+  const { data, loadingState, service, active } = useContext(Context);
   const [services, setServices] = data;
+  const [selectedService, setSelectedService] = service;
   const [loading, setLoading] = loadingState;
+  const [activeService, setActiveService] = active;
 
   // if (loading) {
   //   return <Loading />;
   // }
+
+  const setService = (service) => {
+    setSelectedService(service);
+    setActiveService(service.service_id);
+  };
+
   return (
     <div>
       <Grid>
         {services.map((service) => (
-          <div>
+          <div key={service.service_id}>
             <List>
               <ServicesListItem
+                id={service.service_id}
+                active={activeService}
                 company={service.service_name}
                 code={service.service_ref_code}
+                handler={() => setService(service)}
               />
             </List>
           </div>

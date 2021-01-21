@@ -6,6 +6,8 @@ export const Context = React.createContext();
 const Store = ({ children }) => {
   const ref = firebase.firestore().collection("services");
   const [services, setServices] = useState();
+  const [displayedService, setDisplayedService] = useState();
+  const [activeService, setActiveService] = useState(0);
   const [loadingState, setLoadingState] = useState(true);
 
   function fetchData() {
@@ -26,6 +28,8 @@ const Store = ({ children }) => {
       value={{
         data: [services, setServices],
         loadingState: [loadingState, setLoadingState],
+        service: [displayedService, setDisplayedService],
+        active: [activeService, setActiveService],
       }}
     >
       {children}

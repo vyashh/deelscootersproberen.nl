@@ -2,3 +2,15 @@ $background-color: #f6f5fa;
 $felyx-color: #044b29;
 $check-color: #9b41ff;
 $go-color: #80ba27;
+
+.felyx-bg-color {
+  background-color: $felyx-color;
+}
+
+.check-bg-color {
+  background-color: $check-color;
+}
+
+.go-bg-color {
+  background-color: $go-color;
+}
