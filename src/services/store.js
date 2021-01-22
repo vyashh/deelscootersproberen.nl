@@ -7,7 +7,7 @@ const Store = ({ children }) => {
   const ref = firebase.firestore().collection("services");
   const [services, setServices] = useState();
   const [displayedService, setDisplayedService] = useState();
-  const [activeService, setActiveService] = useState(0);
+  const [activeService, setActiveService] = useState();
   const [loadingState, setLoadingState] = useState(true);
 
   function fetchData() {
