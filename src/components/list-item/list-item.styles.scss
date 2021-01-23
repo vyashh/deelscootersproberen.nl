@@ -5,6 +5,10 @@
   background-color: white;
   width: 90vw;
   border-radius: 10px;
+  border-color: $background-color;
+  box-shadow: 0 0 0px $background-color;
+  transition: border-color 0.3s;
+  transition: box-shadow 0.3s;
 
   &__avatar {
     transform: scale(1.4);
@@ -51,4 +55,24 @@
 .selected {
   border-color: #b7caff;
   box-shadow: 0 0 10px #b7caff;
+}
+
+.copied {
+  color: #000;
+  animation-name: TO-COPIED;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes TO-COPIED {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: #b7caff;
+  }
+  100% {
+    color: #000;
+  }
 }

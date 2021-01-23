@@ -17,9 +17,13 @@
     position: absolute;
     bottom: -2px;
     margin: auto;
-    left: 0;
+    left: 0em;
     right: 0;
     text-align: center;
+    // animation-name: MOVE-SCOOTER;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   &__banner {
@@ -50,5 +54,20 @@
   }
   to {
     background-position-x: 100000%;
+  }
+}
+
+@keyframes MOVE-SCOOTER {
+  0% {
+    left: 0em;
+  }
+  25% {
+    left: 1em;
+  }
+  75% {
+    left: -1em;
+  }
+  100% {
+    left: 0em;
   }
 }

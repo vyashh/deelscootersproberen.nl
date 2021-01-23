@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import "./homepage.scss";
+import { Transition } from "react-spring/renderprops";
 import { Context } from "../services/store";
 import ServiceList from "../components/list/list.component";
 import InfoBar from "../components/info-bar/info-bar.component";

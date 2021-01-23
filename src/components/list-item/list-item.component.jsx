@@ -9,6 +9,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default class ServicesListItem extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class ServicesListItem extends Component {
       logo: {},
       color: "",
       service: "",
+      copied: false,
     };
   }
 
@@ -38,6 +40,13 @@ export default class ServicesListItem extends Component {
     }
   }
 
+  setCopied = () => {
+    this.setState({ copied: true });
+    setTimeout(() => {
+      this.setState({ copied: false });
+    }, 300);
+  };
+
   componentDidMount() {
     this.setCompany();
   }
@@ -51,7 +60,7 @@ export default class ServicesListItem extends Component {
         }
       >
         <div className={"list-item__discount " + this.state.color}>
-          <p className="list-item__discount__text">Gratis 30 min</p>
+          <p className="list-item__discount__text">{this.props.discountType}</p>
         </div>
         <ListItem className="" onClick={this.props.handler}>
           <ListItemAvatar>
@@ -70,9 +79,18 @@ export default class ServicesListItem extends Component {
             }}
           />
           <ListItemSecondaryAction>
-            {/* <Checkbox edge="end" /> */}
-            {/* <FileCopyIcon /> */}
-            <i className="far fa-clone"></i>
+            <CopyToClipboard
+              text={this.props.code}
+              // onCopy={() => this.setState({ copied: true })}
+            >
+              {/* <span>Copy to clipboard with span</span> */}
+              <i
+                className={
+                  this.state.copied ? "far fa-clone copied" : "far fa-clone"
+                }
+                onClick={this.setCopied}
+              ></i>
+            </CopyToClipboard>
           </ListItemSecondaryAction>
         </ListItem>
       </div>

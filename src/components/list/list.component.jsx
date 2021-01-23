@@ -28,6 +28,7 @@ export default function ServiceList() {
                 company={service.service_name}
                 code={service.service_ref_code}
                 handler={() => setService(service)}
+                discountType={service.discount}
               />
             </List>
           </div>

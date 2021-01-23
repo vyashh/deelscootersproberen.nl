@@ -28,9 +28,12 @@ export default function InfoBar() {
         slidesPerView={1}
       >
         <SwiperSlide className="info-bar__slider__item">
+          {currentService.price}
+          {currentService.price_parking}
+        </SwiperSlide>
+        <SwiperSlide className="info-bar__slider__item">
           {currentService.service_name}
         </SwiperSlide>
-        <SwiperSlide className="info-bar__slider__item">Slide 3</SwiperSlide>
         <SwiperSlide className="info-bar__slider__item">Slide 4</SwiperSlide>
       </Swiper>
     </div>
