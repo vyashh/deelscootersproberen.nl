@@ -1,4 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 .welcome-bar {
-  height: 65vh;
+  position: relative;
+  height: 60vh;
   width: 100%;
+  margin-bottom: 2em;
+  background-image: url("../../assets/img/cityscape.svg");
+  background-repeat: repeat;
+  background-size: cover;
+  animation-name: MOVE-BG;
+  animation-duration: 8000s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  &__scooter img {
+    position: absolute;
+    bottom: -2px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  &__banner {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__banner h2 {
+    font-family: "Anton", sans-serif;
+
+    font-size: 3em;
+  }
+
+  &__banner p {
+    // font-size: 1.1em;
+    // font-weight: bold;
+  }
+}
+
+@keyframes MOVE-BG {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: 100000%;
+  }
 }

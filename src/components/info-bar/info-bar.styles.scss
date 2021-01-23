@@ -1,6 +1,7 @@
 .info-bar {
-  height: 65vh;
+  height: 60vh;
   width: 100%;
+  margin-bottom: 2em;
   position: relative;
 
   &__slider {
@@ -13,7 +14,7 @@
 
     &__item {
       text-align: center;
-      height: 65vh !important;
+      height: 60vh !important;
     }
   }
 }
