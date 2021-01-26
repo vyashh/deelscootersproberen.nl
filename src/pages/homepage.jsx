@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./homepage.scss";
 import { Transition } from "react-spring/renderprops";
 import { Context } from "../services/store";

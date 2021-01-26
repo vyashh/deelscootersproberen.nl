@@ -100,10 +100,10 @@ export default class ServicesListItem extends Component {
         </ListItem>
         <Snackbar
           open={this.props.alertStatus}
-          autoHideDuration={2500}
+          autoHideDuration={1500}
           onClose={this.props.handleClose}
         >
-          <Alert everity="success">Gekopieerd!</Alert>
+          <Alert severity="success">Code gekopieerd!</Alert>
         </Snackbar>
       </div>
     );
