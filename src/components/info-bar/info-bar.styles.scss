@@ -1,7 +1,10 @@
+@import "../../utils/variables.scss";
+
 .info-bar {
   height: 60vh;
   width: 100%;
   margin-bottom: 2em;
+  text-align: center;
   position: relative;
 
   &__slider {
@@ -13,8 +16,66 @@
     transform: translate(-50%, -50%);
 
     &__item {
+      color: white;
       text-align: center;
       height: 60vh !important;
     }
+
+    &__content {
+      color: $background-color;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &--icon {
+        text-align: center;
+      }
+
+      &--price {
+        font-size: 2em;
+      }
+    }
   }
+
+  &__company {
+    &--felyx {
+      // background-color: $felyx-color;
+      background-image: url("https://i.ibb.co/pnqtrPN/felyx-bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--check {
+      background-color: $check-color;
+    }
+    &--go {
+      background-color: $go-color;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $background-color !important;
+}
+
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $background-color !important;
+}
+
+.close {
+  font-size: 1em;
+  color: $background-color;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
 }
