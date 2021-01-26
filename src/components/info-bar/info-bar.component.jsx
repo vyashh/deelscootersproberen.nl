@@ -1,13 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Context } from "../../services/store";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "./info-bar.styles.scss";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
-
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export default function InfoBar() {
   const { service, active } = useContext(Context);

@@ -10,10 +10,23 @@ export default function ServiceList() {
   const [services, setServices] = data;
   const [selectedService, setSelectedService] = service;
   const [activeService, setActiveService] = active;
+  const [open, setOpen] = React.useState(false);
 
   const setService = (service) => {
     setSelectedService(service);
     setActiveService(service.service_id);
+  };
+
+  const handleCopyOpenAlert = () => {
+    setOpen(true);
+  };
+
+  const handleCopyCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
   };
 
   return (
@@ -29,6 +42,9 @@ export default function ServiceList() {
                 code={service.service_ref_code}
                 handler={() => setService(service)}
                 discountType={service.discount}
+                alertStatus={open}
+                handleClose={handleCopyCloseAlert}
+                handleOpen={handleCopyOpenAlert}
               />
             </List>
           </div>

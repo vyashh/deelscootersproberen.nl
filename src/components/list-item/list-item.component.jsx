@@ -10,6 +10,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
 
 export default class ServicesListItem extends Component {
   constructor(props) {
@@ -88,11 +90,21 @@ export default class ServicesListItem extends Component {
                 className={
                   this.state.copied ? "far fa-clone copied" : "far fa-clone"
                 }
-                onClick={this.setCopied}
+                onClick={() => {
+                  this.setCopied();
+                  this.props.handleOpen();
+                }}
               ></i>
             </CopyToClipboard>
           </ListItemSecondaryAction>
         </ListItem>
+        <Snackbar
+          open={this.props.alertStatus}
+          autoHideDuration={2500}
+          onClose={this.props.handleClose}
+        >
+          <Alert everity="success">Gekopieerd!</Alert>
+        </Snackbar>
       </div>
     );
   }
