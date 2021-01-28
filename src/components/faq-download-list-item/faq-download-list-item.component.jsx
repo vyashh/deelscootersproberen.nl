@@ -21,6 +21,8 @@ export default class ServicesListItem extends Component {
       logo: {},
       color: "",
       service: "",
+      androidLink: "",
+      iosLink: "",
     };
   }
 
@@ -28,13 +30,31 @@ export default class ServicesListItem extends Component {
     const company = this.props.company;
     switch (company) {
       case "Felyx":
-        this.setState({ logo: felyxlogo, color: "felyx-bg-color" });
+        this.setState({
+          logo: felyxlogo,
+          color: "felyx-bg-color",
+          androidLink:
+            "https://play.google.com/store/apps/details?id=com.felyx.android",
+          iosLink: "https://apps.apple.com/app/id1250107307",
+        });
         break;
       case "Check":
-        this.setState({ logo: checklogo, color: "check-bg-color" });
+        this.setState({
+          logo: checklogo,
+          color: "check-bg-color",
+          androidLink:
+            "https://play.google.com/store/apps/details?id=app.ridecheck.android",
+          iosLink: "https://apps.apple.com/NL/app/id1484477681",
+        });
         break;
       case "Go Share":
-        this.setState({ logo: gologo, color: "go-bg-color" });
+        this.setState({
+          logo: gologo,
+          color: "go-bg-color",
+          androidLink:
+            "https://play.google.com/store/apps/details?id=nl.gosharing.gourban.app",
+          iosLink: "https://apps.apple.com/nl/app/go-sharing/id1477465763",
+        });
         break;
       default:
         break;
@@ -65,12 +85,20 @@ export default class ServicesListItem extends Component {
           />
           <div className="download-list">
             <span>
-              <a className="download-list--android">
+              <a
+                className="download-list--android"
+                href={this.state.androidLink}
+                target="_blank"
+              >
                 <img src={playstore} />
               </a>
             </span>
             <span>
-              <a className="download-list--ios">
+              <a
+                className="download-list--ios"
+                target="_blank"
+                href={this.state.iosLink}
+              >
                 <img src={appstore} />
               </a>
             </span>

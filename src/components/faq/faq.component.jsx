@@ -1,4 +1,5 @@
 import React from "react";
+import "./faq.styles.scss";
 import FaqCostsItem from "../faq-costs-item/faq-costs-item.component";
 import FaqDownloadList from "../faq-download-list/faq-download-list.component";
 
@@ -150,7 +151,7 @@ export default function Faq() {
             <FaqCostsItem
               company="Go Sharing"
               rit="0,29"
-              starttarrief="€0,50"
+              starttarrief="Geen kosten"
               reserveren="Geen kosten*"
               parkeren="0,05"
               exceptions="*Tot 15 min. gratis en daarna per 10 minuten €1,00"
