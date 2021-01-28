@@ -50,15 +50,6 @@ export default function ServiceList() {
           </div>
         ))}
       </Grid>
-      {/* <Grid>
-        {services.map((service) => (
-          <div>
-            <List>
-              <ServicesListItem company={service.company} code={service.code} />
-            </List>
-          </div>
-        ))}
-      </Grid> */}
     </div>
   );
 }
