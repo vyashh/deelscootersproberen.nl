@@ -28,10 +28,10 @@ export default class FaqItem extends Component {
           data-bs-parent="#accordionFlushExample"
         >
           <div className="accordion-body">
-            {/* {this.props.answer} */}
-            <div className="text-wrapper">
+            <p className="text-wrapper">{this.props.answer}</p>
+            {/* <div className="text-wrapper">
               <LoremIpsum p={1} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

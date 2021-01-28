@@ -36,7 +36,7 @@ export default function InfoBar() {
         <p className="info-bar__slider__content--price">
           €{currentService.price}
         </p>
-        <p style={{ fontSize: "0.5em" }}>per minuut</p>
+        <p style={{ fontSize: "0.8em" }}>per minuut</p>
         <p
           className="info-bar__slider__content--parking-price"
           style={{ fontSize: "0.8em" }}

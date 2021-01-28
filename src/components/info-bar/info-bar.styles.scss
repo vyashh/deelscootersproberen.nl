@@ -48,10 +48,16 @@
       background-position: center;
     }
     &--check {
-      background-color: $check-color;
+      background-image: url("https://i.ibb.co/10c6H53/Check-1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
     &--go {
-      background-color: $go-color;
+      background-image: url("https://i.ibb.co/T1fyznd/Felyx-1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }
