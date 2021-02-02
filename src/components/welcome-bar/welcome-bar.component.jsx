@@ -14,7 +14,7 @@ export default function WelcomeBar() {
     <div className="welcome-bar">
       <animated.div style={fadeIn} className="welcome-bar__banner">
         <h2>Touren door je eigen stad?</h2>
-        <p>Probeer een deelscooter!</p>
+        <p className="welcome-bar__banner--subtext">Probeer een deelscooter!</p>
       </animated.div>
       <div className="welcome-bar__scooter">
         <img src={scooter} alt="" srcset="" />

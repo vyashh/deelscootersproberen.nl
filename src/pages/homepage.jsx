@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div>
       {!activeService ? <WelcomeBar /> : <InfoBar />}
-      <div className="container">
+      <div className="container margin">
         <ServiceList />
         <hr />
         <p style={{ textAlign: "justify", padding: "1rem 1.25rem" }}>
