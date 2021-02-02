@@ -1,4 +1,5 @@
 @import "../../utils/variables.scss";
+@import "../../utils/include-media.scss";
 
 .list-item {
   position: relative;
@@ -9,6 +10,10 @@
   box-shadow: 0 0 0px $background-color;
   transition: border-color 0.3s;
   transition: box-shadow 0.3s;
+
+  @include media(">tablet") {
+    width: 60vw;
+  }
 
   &__avatar {
     transform: scale(1.4);
@@ -74,5 +79,12 @@
   }
   100% {
     color: #000;
+  }
+}
+
+.MuiListItem-root {
+  @include media(">desktop", "<=desktop-4k") {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
   }
 }

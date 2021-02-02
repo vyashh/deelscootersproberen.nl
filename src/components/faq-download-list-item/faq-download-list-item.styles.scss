@@ -1,4 +1,5 @@
 @import "../../utils/variables.scss";
+@import "../../utils/include-media.scss";
 
 .download-list-item {
   position: relative;
@@ -9,6 +10,10 @@
   box-shadow: 0 0 0px $background-color;
   transition: border-color 0.3s;
   transition: box-shadow 0.3s;
+
+  @include media(">tablet") {
+    width: 58vw;
+  }
 
   &__avatar {
     transform: scale(1.8);
@@ -56,19 +61,35 @@
   margin-left: 1em;
   &--android img {
     float: right;
-
     width: 50%;
     height: auto;
+
+    @include media(">desktop", "<=desktop-4k") {
+      width: 25%;
+    }
+
+    @include media(">=tablet") {
+      width: 25%;
+    }
   }
 
   &--ios img {
+    float: right;
+
     width: 50%;
     height: auto;
+
+    @include media(">desktop", "<=desktop-4k") {
+      width: 25%;
+    }
+    @include media(">=tablet") {
+      width: 25%;
+    }
   }
-}
-
-.android-download img {
-}
-
-.ios-download img {
+  @include media(">desktop", "<=desktop-4k") {
+    margin-left: 0em;
+  }
+  @include media(">=tablet") {
+    margin-left: 0em;
+  }
 }

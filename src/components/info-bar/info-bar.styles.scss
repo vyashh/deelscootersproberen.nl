@@ -42,19 +42,20 @@
   &__company {
     &--felyx {
       // background-color: $felyx-color;
-      background-image: url("https://i.ibb.co/pnqtrPN/felyx-bg.png");
+      background-image: url("../../assets/img/banners/banner_felyx.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }
     &--check {
-      background-image: url("https://i.ibb.co/10c6H53/Check-1.png");
+      background-image: url("../../assets/img/banners/banner_check.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }
     &--go {
-      background-image: url("https://i.ibb.co/T1fyznd/Felyx-1.png");
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("../../assets/img/banners/banner_go.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

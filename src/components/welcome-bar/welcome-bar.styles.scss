@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import "../../utils/include-media.scss";
 
 .welcome-bar {
   position: relative;
@@ -8,10 +9,24 @@
   background-image: url("../../assets/img/cityscape.svg");
   background-repeat: repeat;
   background-size: cover;
-  animation-name: MOVE-BG;
+  animation-name: MOVE-BG !important ;
   animation-duration: 8000s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+
+  @include media(">desktop") {
+    animation-duration: 1000s;
+  }
+
+  @include media(">desktop", "<=desktop-4k") {
+    background-size: contain;
+    background-position: bottom;
+    animation-name: MOVE-BG-LARGE-DESKTOP !important;
+    animation-duration: 5500s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-bottom: 1em;
+  }
 
   &__scooter img {
     position: absolute;
@@ -20,10 +35,17 @@
     left: 0em;
     right: 0;
     text-align: center;
-    // animation-name: MOVE-SCOOTER;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    width: 8em;
+    height: auto;
+    @include media(">=desktop") {
+      font-size: 2em;
+      width: 5em;
+      height: auto;
+    }
+
+    @include media(">desktop", "<=desktop-4k") {
+      width: 4em;
+    }
   }
 
   &__banner {
@@ -34,17 +56,21 @@
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
+
+    &--subtext {
+      @include media(">desktop", "<=desktop-4k") {
+        font-size: 1.5em;
+      }
+    }
   }
 
   &__banner h2 {
     font-family: "Anton", sans-serif;
-
     font-size: 3em;
-  }
 
-  &__banner p {
-    // font-size: 1.1em;
-    // font-weight: bold;
+    @include media(">=desktop") {
+      font-size: 5em;
+    }
   }
 }
 
@@ -57,17 +83,11 @@
   }
 }
 
-@keyframes MOVE-SCOOTER {
-  0% {
-    left: 0em;
+@keyframes MOVE-BG-LARGE-DESKTOP {
+  from {
+    background-position-x: 100000%;
   }
-  25% {
-    left: 1em;
-  }
-  75% {
-    left: -1em;
-  }
-  100% {
-    left: 0em;
+  to {
+    background-position-x: 0%;
   }
 }
