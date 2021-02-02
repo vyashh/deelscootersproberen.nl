@@ -1,0 +1,91 @@
+@import "../../utils/variables.scss";
+@import "../../utils/include-media.scss";
+
+.list-item {
+  position: relative;
+  background-color: white;
+  width: 90vw;
+  border-radius: 10px;
+  border-color: $background-color;
+  box-shadow: 0 0 0px $background-color;
+  transition: border-color 0.3s;
+  transition: box-shadow 0.3s;
+
+  @include media(">tablet") {
+    width: 60vw;
+  }
+
+  &__avatar {
+    transform: scale(1.4);
+  }
+
+  &__code {
+    cursor: pointer;
+    color: #707070;
+  }
+
+  &__discount {
+    position: absolute;
+    top: -0.5em;
+    right: 0;
+    width: 7em;
+    height: 1.5em;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 47px 40px -5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 47px 40px -5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 47px 40px -5px rgba(0, 0, 0, 0.25);
+    display: table;
+  }
+
+  &__discount p {
+    color: white;
+    font-size: 0.65em;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+.MuiAvatar-img {
+  object-fit: contain !important;
+  // transform: scale(1.2);
+}
+
+.selected {
+  border-color: #b7caff;
+  box-shadow: 0 0 10px #b7caff;
+}
+
+.copied {
+  color: #000;
+  animation-name: TO-COPIED;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes TO-COPIED {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: #b7caff;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+.MuiListItem-root {
+  @include media(">desktop", "<=desktop-4k") {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+  }
+}

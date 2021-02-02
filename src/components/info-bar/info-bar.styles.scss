@@ -1,0 +1,88 @@
+@import "../../utils/variables.scss";
+
+.info-bar {
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 2em;
+  text-align: center;
+  position: relative;
+
+  &__slider {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    &__item {
+      color: white;
+      text-align: center;
+      height: 60vh !important;
+    }
+
+    &__content {
+      color: $background-color;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &--icon {
+        text-align: center;
+      }
+
+      &--price {
+        font-size: 2em;
+      }
+    }
+  }
+
+  &__company {
+    &--felyx {
+      // background-color: $felyx-color;
+      background-image: url("../../assets/img/banners/banner_felyx.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--check {
+      background-image: url("../../assets/img/banners/banner_check.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--go {
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("../../assets/img/banners/banner_go.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $background-color !important;
+}
+
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $background-color !important;
+}
+
+.close {
+  font-size: 1em;
+  color: $background-color;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}

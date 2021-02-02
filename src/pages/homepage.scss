@@ -1,0 +1,14 @@
+@import "../utils/include-media.scss";
+
+.hero__bar {
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.margin {
+  width: 100vw;
+  @include media(">tablet") {
+    width: 60vw;
+  }
+}
