@@ -1,3 +1,5 @@
+@import "../../utils/include-media.scss";
+
 .loading {
   &__animation {
     width: 10%;
@@ -5,13 +7,16 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @include media(">desktop", "<=desktop-4k") {
+      width: 5%;
+    }
   }
 }
 
 .vertical-center {
-  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
+  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
