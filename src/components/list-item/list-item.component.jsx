@@ -72,20 +72,23 @@ export default class ServicesListItem extends Component {
               src={this.state.logo}
             />
           </ListItemAvatar>
-          <ListItemText
-            className="list-item__code"
-            primary={this.props.code}
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-          />
+          <CopyToClipboard text={this.props.code}>
+            <ListItemText
+              className="list-item__code"
+              primary={this.props.code}
+              style={{
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+              onClick={() => {
+                this.setCopied();
+                this.props.handleOpen();
+              }}
+            />
+          </CopyToClipboard>
+
           <ListItemSecondaryAction>
-            <CopyToClipboard
-              text={this.props.code}
-              // onCopy={() => this.setState({ copied: true })}
-            >
-              {/* <span>Copy to clipboard with span</span> */}
+            <CopyToClipboard text={this.props.code}>
               <i
                 className={
                   this.state.copied ? "far fa-clone copied" : "far fa-clone"
