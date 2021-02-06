@@ -10,8 +10,7 @@ export default function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        // random
-        <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+        <Route render={() => <Redirect to={{ pathname: "/" }} />} /> // invalid url redirect
       </Switch>
     </BrowserRouter>
   );
