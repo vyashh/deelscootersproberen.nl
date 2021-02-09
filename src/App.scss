@@ -9,6 +9,6 @@ body {
   font-family: "Noto Sans", sans-serif;
 
   @include media(">desktop", "<=desktop-4k") {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
